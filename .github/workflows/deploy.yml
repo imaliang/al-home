@@ -1,0 +1,52 @@
+name: al-home-deploy 🚀
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  al-home-build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🚚
+        uses: actions/checkout@v2.3.1
+        with:
+          lfs: true
+          fetch-depth: 0
+
+      - name: Install and Build 🔨
+        run: |
+          npm install
+          npm run build
+          cp README.md dist
+          cp CNAME dist
+
+      - name: Set Env 🔨
+        env:
+          ACTION_DEPLOY_KEY: ${{ secrets.GIT_SSH_RSA_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: Deploy To GitHub Pages 🚀
+        run: |
+          cd dist
+          git config --global user.name 'aliang'
+          git config --global user.email 'aliang.link@foxmail.com'
+          git init
+          git add -A
+          git commit -m 'GitHub Pages 部署 🚀'
+          git push -f git@github.com:imaliang/al-home.git master:gh-pages
+          echo 'alearn deploy to gitHub pages success 🎉 🎉 🎉'
+
+      - name: Deploy to Tencent Server 
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "./dist/"
+          remoteDir: "/"

@@ -1,0 +1,54 @@
+{
+	"static": {
+		"prefix": "https://cdn.jsdelivr.net/gh/imaliang/al-home@gh-pages/",
+		"jsdelivr": "https://cdn.jsdelivr.net/gh/imaliang/al-home@gh-pages/"
+	},
+	"head": {
+		"title": "阿椋",
+		"description": "Author:aliang,Category:Personal Blog",
+		"favicon": "assets/favicon.ico"
+	},
+	"intro": {
+		"title": "aliang",
+		"subtitle": "闲时无心，用时无人",
+		"enter": "enter",
+		"supportAuthor": true,
+		"background": true
+	},
+	"main": {
+		"name": "阿椋",
+		"signature": "Code & Input & Output",
+		"avatar": {
+			"link": "assets/head.png",
+			"height": "100",
+			"width": "100"
+		},
+		"ul": {
+			"first": {
+				"href": "https://www.aliang.link",
+				"icon": "blog",
+				"text": "Blog"
+			},
+			"second": {
+				"href": "https://alearn.aliang.link",
+				"icon": "alearn",
+				"text": "alearn"
+			},
+			"third": {
+				"href": "https://www.aliang.link/about/",
+				"icon": "smile",
+				"text": "About"
+			},
+			"fourth": {
+				"href": "https://github.com/imaliang",
+				"icon": "github",
+				"text": "Github"
+			},
+			"fifth": {
+				"href": "https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=M1JfWlJdVB1fWl1Yc1VcS15SWl8dUFxe",
+				"icon": "email",
+				"text": "Email"
+			}
+		}
+	}
+}

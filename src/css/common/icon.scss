@@ -1,0 +1,48 @@
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+	font-family: 'iconfont' !important;
+	font-size: inherit;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+@font-face {
+	font-family: "iconfont"; /* Project id 2547308 */
+	src: url('//at.alicdn.com/t/font_2547308_eqscz2eu3q9.woff2?t=1620921177652') format('woff2'),
+	url('//at.alicdn.com/t/font_2547308_eqscz2eu3q9.woff?t=1620921177652') format('woff'),
+	url('//at.alicdn.com/t/font_2547308_eqscz2eu3q9.ttf?t=1620921177652') format('truetype');
+}
+
+.iconfont {
+	font-family: "iconfont" !important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-alearn:before {
+	content: "\e60a";
+}
+
+.icon-smile:before {
+	content: "\e600";
+}
+
+.icon-blog:before {
+	content: "\e601";
+}
+
+.icon-email:before {
+	content: "\e617";
+}
+
+.icon-github:before {
+	content: "\e67c";
+}
