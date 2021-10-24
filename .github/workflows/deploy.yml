@@ -30,8 +30,9 @@ jobs:
           echo "$ACTION_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Deploy To GitHub Pages 🚀
+          ssh-keyscan ${{ secrets.TENCENT_SERVER_IP }} >> ~/.ssh/known_hosts
+          
+      - name: Deploy To GitHub Pages And Tencent Server 🚀
         run: |
           cd dist
           git config --global user.name 'aliang'
@@ -41,12 +42,5 @@ jobs:
           git commit -m 'GitHub Pages 部署 🚀'
           git push -f git@github.com:imaliang/al-home.git master:gh-pages
           echo 'alearn deploy to gitHub pages success 🎉 🎉 🎉'
-
-      - name: Deploy to Tencent Server 
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          localDir: "./dist/"
-          remoteDir: "/"
+          git push -f root@${{ secrets.TENCENT_SERVER_IP }}:/data/repo/al-home.git master:master
+          echo 'al-home deploy to tencent server success 🎉 🎉 🎉'
