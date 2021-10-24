@@ -10,6 +10,14 @@
 	text-align: center;
 	transition: width ease 0.5s, height ease 0.5s;
 
+	#beian {
+		margin: 15px;
+
+		a.icon.icon-beian-fill {
+			width: auto;
+		}
+	}
+
 	.card-inner {
 		padding: 0;
 		border: 0;
@@ -30,6 +38,7 @@
 				h1 {
 					font-size: 1rem !important;
 				}
+
 				h2 {
 					font-size: 0.8rem !important;
 				}
@@ -71,6 +80,7 @@
 				@media screen {
 				}
 			}
+
 			h2 {
 				color: #ccc;
 				letter-spacing: 3px;
@@ -96,14 +106,17 @@
 				height: 100%;
 				border-left: solid 0.1px hsla(0, 0%, 100%, 0.1);
 				border-right: solid 0.1px hsla(0, 0%, 100%, 0.1);
+
 				a {
 					color: #b6b6b6;
 					transition: all 0.2s;
+
 					&:hover {
 						color: #f6f6f6;
 						text-shadow: 0 0 2px #f6f6f6;
 					}
 				}
+
 				&:hover {
 					transform: translateY(-2px);
 				}
