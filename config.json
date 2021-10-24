@@ -51,7 +51,7 @@
 			},
 			"beian": {
 				"href": "https://beian.miit.gov.cn/",
-				"icon": "icon-beian-fill",
+				"icon": "beian-fill",
 				"text": "京ICP备2021015997号"
 			}
 		}
