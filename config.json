@@ -1,7 +1,7 @@
 {
 	"static": {
-		"prefix": "https://cdn.jsdelivr.net/gh/imaliang/al-home@gh-pages/",
-		"jsdelivr": "https://cdn.jsdelivr.net/gh/imaliang/al-home@gh-pages/"
+		"prefix": "",
+		"jsdelivr": ""
 	},
 	"head": {
 		"title": "阿椋",
@@ -19,7 +19,7 @@
 		"name": "阿椋",
 		"signature": "Code & Input & Output",
 		"avatar": {
-			"link": "assets/head.png",
+			"link": "assets/head.jpg",
 			"height": "100",
 			"width": "100"
 		},
@@ -30,9 +30,9 @@
 				"text": "Blog"
 			},
 			"second": {
-				"href": "https://alearn.aliang.link",
-				"icon": "alearn",
-				"text": "alearn"
+				"href": "https://tool.aliang.link",
+				"icon": "search",
+				"text": "Search"
 			},
 			"third": {
 				"href": "https://www.aliang.link/about/",
