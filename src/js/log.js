@@ -1,7 +1,7 @@
 !function () {
 	if (window.console && window.console.log) {
 		const e = (...e) => setTimeout(console.log.bind(console, ...e));
-		e("%c ", "\n  background:url(".concat(`/assets/favicon.ico`, ") no-repeat center;\n  background-size:100px;\n  margin:5px 0;\n  padding:0 0 120px 100px;\n  border-radius:10px;\n  overflow:hidden;\n  ")),
+		e("%c ", "\n  background:url(".concat(`https://aliang.link/assets/favicon.ico`, ") no-repeat center;\n  background-size:100px;\n  margin:5px 0;\n  padding:0 0 120px 100px;\n  border-radius:10px;\n  overflow:hidden;\n  ")),
 			e("\n %c 阿椋 %c https://aliang.link \n", "color:#FFFFFB;background:#ffa628;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "background: #efefef;padding:5px 0 5px;border-radius:0 .5rem .5rem 0;"),
 			e(`%c页面加载消耗了 ${(Math.round(100 * performance.now()) / 100 / 1e3).toFixed(2)}s`, "background: #fff;color: #333;padding:10px;text-shadow: 0 0 2px #eee, 0 0 3px #eee, 0 0 3px #eee, 0 0 2px #eee, 0 0 3px #eee;"),
 		localStorage.getItem("access") || localStorage.setItem("access", (new Date).getTime());
