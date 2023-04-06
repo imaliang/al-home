@@ -10,12 +10,12 @@ head
 	meta(name="apple-mobile-web-app-status-bar-style" content="#222325")
 	meta(name="msapplication-navbutton-color" content="#222325")
 
-	link(rel="stylesheet" href="https://cdn.jsdelivr.net/gh/imaliang/assets/font/ComicSansMS/font.min.css" )
+	link(rel="stylesheet" href=`${static.prefix}`+'assets/font/ComicSansMS/font.css' )
 	link(rel="stylesheet" href=`${static.prefix}`+'css/style.css' )
 
 	meta(http-equiv="x-dns-prefetch-control" content="on")
-	link(rel="dns-prefetch" href="https://cdn.jsdelivr.net")
-	link(rel="prefetch" href="https://cdn.jsdelivr.net/")
+	link(rel="dns-prefetch" href="https://cdn.staticfile.org")
+	link(rel="prefetch" href="https://cdn.staticfile.org")
 
 	meta(name="description" content=`${head.description}`)
 	link(rel="icon" href=`${static.prefix}`+`${head.favicon}` type="image/x-icon")
